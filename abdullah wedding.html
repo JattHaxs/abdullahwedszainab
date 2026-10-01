@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abdullah & Zainab | A Beautiful Beginning</title>
+<meta name="theme-color" content="#2a060f">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Amiri&display=swap" rel="stylesheet">
+<style>
+:root{--mar:#5a0f22;--mar-d:#2a060f;--mar-g:#a01f42;--blk:#070203;--gold:#e2b857;--gold-l:#fff0b8;--ivory:#f8ecd6;--mut:#d6b9ab;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;height:100%}
+body{margin:0;min-height:100%;background:radial-gradient(ellipse 90% 60% at 50% 0,var(--mar-g),transparent 70%),radial-gradient(ellipse 80% 50% at 50% 100%,#000,transparent),var(--mar);background-attachment:fixed;color:var(--ivory);font:1.1rem/1.65 Syne,system-ui,sans-serif;overflow-x:hidden}
+body.lock{overflow:hidden}
+.gold{background:linear-gradient(100deg,#b98a2c,var(--gold-l) 35%,var(--gold) 60%,#9c6d1c);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ar{font-family:Amiri,"Times New Roman",serif;direction:rtl}
+.it{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:500}
+#net{position:fixed;inset:0;z-index:0;pointer-events:none}
+.glow{position:fixed;left:0;top:0;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;background:radial-gradient(circle,#e2b85730,transparent 65%);pointer-events:none;z-index:1;display:none}
+@media(pointer:fine){.glow{display:block}}
+main{position:relative;z-index:2}
+section{padding:clamp(4rem,10vw,7rem) 1.25rem;max-width:1080px;margin:0 auto;text-align:center}
+h2{font-size:clamp(2rem,7vw,3.6rem);font-weight:800;line-height:1.05;margin:0 0 .8rem;letter-spacing:-.02em}
+p{margin:.6rem auto;max-width:34em;color:var(--mut)}
+/* gate */
+#gate{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,#4a0b1b,var(--blk) 70%);transition:opacity 1.2s,transform 1.2s}
+#gate.open{opacity:0;transform:scale(1.35);pointer-events:none}
+#gate svg{position:absolute;width:min(130vw,820px);opacity:.55}
+.g1{animation:spin 50s linear infinite;transform-origin:center}.g2{animation:spin 80s linear infinite reverse;transform-origin:center}
+@keyframes spin{to{transform:rotate(360deg)}}
+.gc{position:relative;text-align:center;padding:1.5rem}
+.gc .ar{font-size:clamp(1.8rem,6vw,2.6rem);color:var(--gold-l)}
+.btn{display:inline-block;padding:.75rem 1.9rem;border:1px solid var(--gold);border-radius:999px;color:var(--gold-l);background:#00000055;font:600 1rem Syne,sans-serif;text-decoration:none;cursor:pointer;backdrop-filter:blur(6px);transition:.3s}
+.btn:hover,.btn:focus-visible{background:var(--gold);color:var(--blk);box-shadow:0 0 40px #e2b85799;outline:0}
+.enter{margin-top:2rem;animation:pl 2.4s infinite}
+@keyframes pl{50%{box-shadow:0 0 36px #e2b85788}}
+/* dock */
+.dock{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));transform:translate(-50%,200%);z-index:60;display:flex;gap:.2rem;padding:.35rem;border-radius:999px;background:#070203cc;border:1px solid #e2b85766;backdrop-filter:blur(14px);transition:transform .8s .9s cubic-bezier(.2,.9,.3,1.2)}
+body.in .dock{transform:translate(-50%,0)}
+.dock a,.dock button{color:var(--gold-l);background:none;border:0;font:600 .85rem Syne,sans-serif;padding:.55rem .9rem;border-radius:999px;text-decoration:none;cursor:pointer}
+.dock a:hover,.dock button:hover,.dock a:focus-visible,.dock button:focus-visible{background:var(--gold);color:var(--blk);outline:0}
+/* hero */
+.hero{min-height:100vh;display:grid;place-items:center;position:relative;overflow:hidden;max-width:none}
+.orbit{position:absolute;width:min(150vw,1000px);left:50%;top:50%;transform:translate(-50%,-50%);opacity:.5;pointer-events:none}
+.orbit .a{transform-origin:center;animation:spin 90s linear infinite}.orbit .b{transform-origin:center;animation:spin 140s linear infinite reverse}
+.hc{position:relative}
+.portal{display:inline-block;padding:1.6rem 2.2rem 1rem;border:1px solid var(--gold);border-radius:200px 200px 0 0;border-bottom:0;background:linear-gradient(#e2b85722,transparent);box-shadow:0 -20px 60px #e2b85733}
+.portal .ar{font-size:clamp(1.7rem,6vw,2.4rem);color:var(--gold-l);text-shadow:0 0 24px #e2b857aa}
+.guest{color:var(--gold-l);margin-top:1.2rem}
+h1{margin:.4rem 0;font-weight:800;line-height:.92;letter-spacing:-.04em;font-size:clamp(3.4rem,15vw,9.5rem)}
+h1 em{display:block;font:italic 500 .42em "Cormorant Garamond",serif;letter-spacing:0;margin:.1em 0;color:var(--gold)}
+.date{font-size:clamp(1.05rem,3.5vw,1.5rem);color:var(--ivory)}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.4rem,2vw,1.2rem);margin:2rem auto 0;max-width:560px}
+.u{position:relative;aspect-ratio:1;display:grid;place-items:center;align-content:center;border-radius:50%;background:radial-gradient(#00000099,#070203cc);backdrop-filter:blur(6px)}
+.u svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+.u circle{fill:none;stroke-width:3}.u .bg{stroke:#e2b85730}.u .p{stroke:var(--gold);stroke-linecap:round;stroke-dasharray:289;filter:drop-shadow(0 0 4px var(--gold));transition:stroke-dashoffset 1s linear}
+.u b{font-size:clamp(1.5rem,6.5vw,2.6rem);line-height:1;font-variant-numeric:tabular-nums}
+.u span{font-size:.72rem;color:var(--mut)}
+#done{display:none;font-size:1.8rem;margin-top:1.5rem}
+/* marquee */
+.mq{position:relative;z-index:2;overflow:hidden;border-block:1px solid #e2b85766;background:#070203dd;padding:.9rem 0;transform:rotate(-1.2deg);margin:2rem 0}
+.mq div{display:flex;width:max-content;animation:mq 28s linear infinite;font-size:clamp(1.3rem,4vw,2.2rem);font-weight:800;white-space:nowrap}
+.mq span{padding:0 1.4rem}.mq i{color:var(--gold);font-style:normal}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* statement */
+.big{font-size:clamp(1.6rem,5.5vw,3.2rem);line-height:1.2;font-weight:700;max-width:18em;margin:0 auto;color:var(--ivory)}
+.big b{font-weight:700}.big .it{font-size:1.15em;color:var(--gold)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1rem;margin-top:3rem}
+.stats div{padding:1.4rem .6rem;border:1px solid #e2b85755;border-radius:20px 20px 60px 60px;background:#07020388}
+.stats b{display:block;font-size:2.8rem;line-height:1}.stats span{font-size:.9rem;color:var(--mut)}
+/* path */
+.path{position:relative;margin-top:3rem;text-align:left}
+.rail{position:absolute;left:14px;top:0;bottom:0;width:2px;background:#e2b85733}
+.rail i{display:block;width:100%;height:0;background:linear-gradient(var(--gold-l),var(--gold));box-shadow:0 0 14px var(--gold)}
+.ev{position:relative;margin:0 0 2.4rem 44px;padding:1.6rem;border-radius:28px 100px 28px 28px;border:1px solid #e2b85788;background:linear-gradient(150deg,#070203ee,#3a0a16dd);transform-style:preserve-3d;transition:transform .25s;transform:perspective(900px) rotateX(var(--rx,0)) rotateY(var(--ry,0))}
+.ev::before{content:"";position:absolute;left:-37px;top:2.2rem;width:16px;height:16px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 6px #e2b85733,0 0 20px var(--gold)}
+.ev .dn{font-size:clamp(3.5rem,12vw,6rem);font-weight:800;line-height:.9}
+.ev .mo{font:italic 600 1.5rem "Cormorant Garamond",serif;color:var(--gold)}
+.ev h3{margin:.8rem 0 .2rem;font-size:1.7rem}
+.ev p{margin:.2rem 0;max-width:none}
+.row{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}.row .btn{padding:.5rem 1.1rem;font-size:.85rem}
+@media(min-width:800px){.rail{left:50%}.ev{width:46%;margin-left:0}.ev:nth-child(even){margin-left:54%}.ev::before{left:auto;right:-8.7%;}.ev:nth-child(even)::before{right:auto;left:-8.7%}}
+/* day */
+.chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem;margin-top:2rem;text-align:left}
+.chips div{padding:1.2rem;border-radius:18px;border:1px solid #e2b85755;background:#07020399;backdrop-filter:blur(6px)}
+.chips b{display:block;font-size:1.8rem;color:var(--gold-l)}.chips span{color:var(--mut);font-size:.95rem}
+/* mood */
+.mood{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem;margin-top:2rem}
+.mood div{aspect-ratio:1;display:grid;place-items:center;border-radius:50% 50% 14px 14px;border:1px solid #e2b85766;font:italic 600 1.7rem "Cormorant Garamond",serif;color:var(--gold-l);text-shadow:0 2px 12px #000}
+.m1{background:repeating-radial-gradient(circle at 50% 100%,#5a0f22 0 8px,#7a1630 8px 10px)}
+.m2{background:conic-gradient(from 0deg,#070203,#5a0f22,#070203,#a01f42,#070203)}
+.m3{background:repeating-conic-gradient(#e2b85722 0 15deg,#2a060f 15deg 30deg)}
+.m4{background:linear-gradient(135deg,#a01f42,#2a060f 60%,#070203)}
+.m5{background:radial-gradient(circle,#e2b85755,#2a060f 70%)}
+.m6{background:repeating-linear-gradient(45deg,#5a0f22 0 10px,#3a0a16 10px 20px)}
+.sw{display:flex;justify-content:center;gap:1.6rem;margin-top:1.6rem;flex-wrap:wrap}
+.sw i{display:block;width:84px;height:84px;border-radius:50%;margin:0 auto .5rem;border:2px solid var(--gold);box-shadow:0 0 30px var(--c)}
+footer{position:relative;z-index:2;padding:5rem 1.25rem 7rem;text-align:center;background:linear-gradient(transparent,var(--blk) 40%)}
+footer .ar{font-size:2.2rem}footer h2{font-size:clamp(2.6rem,10vw,6rem)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}.rv.v{opacity:1;transform:none}
+</style>
+</head>
+<body class="lock">
+<canvas id="net" aria-hidden="true"></canvas><div class="glow" id="glow"></div>
+
+<div id="gate">
+  <svg viewBox="-300 -300 600 600" fill="none" stroke="#e2b857" aria-hidden="true">
+    <g class="g1"><circle r="120" stroke-dasharray="2 8"/><circle r="200" stroke-opacity=".5"/><path d="M0-200L40-40 200 0 40 40 0 200-40 40-200 0-40-40z" stroke-opacity=".4"/></g>
+    <g class="g2"><circle r="270" stroke-dasharray="1 14" stroke-width="3"/><rect x="-150" y="-150" width="300" height="300" stroke-opacity=".3" transform="rotate(45)"/><rect x="-150" y="-150" width="300" height="300" stroke-opacity=".3"/></g>
+  </svg>
+  <div class="gc">
+    <div class="ar">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <p class="it" style="font-size:1.5rem;color:var(--gold)">The wedding of Abdullah Hamid &amp; Zainab Munawar</p>
+    <button class="btn enter" id="enter">Enter the celebration</button>
+  </div>
+</div>
+
+<nav class="dock" aria-label="Sections"><a href="#top">Home</a><a href="#events">Events</a><a href="#day">The day</a><a href="#style">Style</a></nav>
+
+<main>
+<section id="top" class="hero">
+  <svg class="orbit" viewBox="-300 -300 600 600" fill="none" stroke="#e2b857" aria-hidden="true">
+    <g class="a"><circle r="150" stroke-dasharray="3 9"/><circle r="230" stroke-opacity=".5"/><circle cx="150" r="6" fill="#e2b857"/><circle cx="-230" r="9" fill="#fff0b8"/><path d="M-30-150a30 30 0 1 0 0 60a24 24 0 1 1 0-60z" fill="#e2b857" stroke="none" transform="translate(30 -50)"/></g>
+    <g class="b"><circle r="290" stroke-dasharray="1 12" stroke-width="3"/><circle r="190" stroke-opacity=".35"/><circle cy="-190" r="5" fill="#e2b857"/><circle cy="290" r="7" fill="#fff0b8"/></g>
+  </svg>
+  <div class="hc">
+    <div class="portal"><div class="ar">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div></div>
+    <p class="guest" id="guest">With the blessings of their families</p>
+    <h1><span class="gold">Abdullah</span><em>weds</em><span class="gold">Zainab</span></h1>
+    <div class="date" id="dateline"></div>
+    <div class="cd" role="timer" id="cd"></div>
+    <div id="done" class="gold">Alhamdulillah, today is the day.</div>
+  </div>
+</section>
+
+<div class="mq" aria-hidden="true"><div id="mq"></div></div>
+
+<section id="story">
+  <p class="big rv">Two families. One <span class="it">beautiful beginning.</span> Three days of <b class="gold">gratitude, laughter</b> and duas.</p>
+  <div class="stats rv" id="stats"></div>
+  <div class="rv" style="margin-top:2.2rem"><button class="btn" id="share">Share this invitation</button></div>
+</section>
+
+<section id="events">
+  <h2 class="gold rv">The celebrations</h2>
+  <p class="rv">Follow the path from the first night to the last. Each event can go straight into your calendar.</p>
+  <div class="path"><div class="rail"><i id="rf"></i></div><div id="evgrid"></div></div>
+</section>
+
+<section id="day">
+  <h2 class="gold rv">Inside the big day</h2>
+  <div class="chips rv" id="tl"></div>
+  <h3 class="gold rv">(only on paper, baki ap khud samajh daar hain)</h3>
+</section>
+
+<!-- <section id="style">
+  <h2 class="gold rv">Dress in the palette</h2>
+  <p class="rv">Deep maroon, liquid gold and midnight black. Traditional or formal, as bold as you like.</p>
+  <div class="sw rv"><div><i style="background:#5a0f22;--c:#a01f42"></i>Maroon</div><div><i style="background:#e2b857;--c:#e2b857"></i>Gold</div><div><i style="background:#070203;--c:#5a0f22"></i>Black</div></div>
+  <div class="mood rv"><div class="m1">Love</div><div class="m2 ar">بَرَكَة</div><div class="m3">Family</div><div class="m4">Joy</div><div class="m5 ar">دُعَاء</div><div class="m6">Forever</div></div>
+</section> -->
+</main>
+
+<footer>
+  <div class="ar gold">بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا</div>
+  <h2 class="gold">Abdullah &amp; Zainab</h2>
+  <p>Your presence and your prayers are the best gift we could ask for (Par le ayein tou behtar hai lol ;) ).</p>
+</footer>
+
+<script>
+/* ===== EDIT YOUR DETAILS HERE ===== */
+const CONFIG={
+  groom:"Abdullah",bride:"Zainab",
+  date:"2026-11-15T18:30:00",
+  events:[
+    {name:"Mehndi",date:"2026-11-14T18:30",venue:"The Grand Desire Marquee ",addr:"Gujranwala"},
+    {name:"Nikah & Barat",date:"2026-11-15T18:30",venue:"The Grand Desire Marquee ",addr:"Gujranwala"},
+    {name:"Walima",date:"2026-11-16T18:30",venue:"The Grand Desire Marquee ",addr:"Gujranwala"}
+  ],
+  schedule:[["6:00 PM","Guests arrive"],["6:30 PM","Nikah ceremony"],["7:30 PM","Grand entrance"],["8:30 PM","Dinner is served"],["10:30 PM","Rukhsati"]]
+};
+/* =================================== */
+const $=id=>document.getElementById(id),T=new Date(CONFIG.date),p2=n=>String(n).padStart(2,"0");
+const fmt=(d,o)=>new Intl.DateTimeFormat("en-GB",o).format(d);
+$("dateline").textContent=fmt(T,{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+const g=new URLSearchParams(location.search).get("guest");
+if(g)$("guest").textContent="Dear "+g.slice(0,40)+", you are invited";
+/* countdown rings */
+const U=[["d","days",365],["h","hours",24],["m","minutes",60],["s","seconds",60]];
+$("cd").innerHTML=U.map(u=>`<div class="u"><svg viewBox="0 0 100 100"><circle class="bg" cx="50" cy="50" r="46"/><circle class="p" id="r${u[0]}" cx="50" cy="50" r="46"/></svg><b id="${u[0]}">--</b><span>${u[1]}</span></div>`).join("");
+function tick(){const ms=T-Date.now();if(ms<=0){$("cd").style.display="none";$("done").style.display="block";return}
+ const s=Math.floor(ms/1e3),v=[Math.floor(s/86400),Math.floor(s%86400/3600),Math.floor(s%3600/60),s%60];
+ U.forEach((u,i)=>{$(u[0]).textContent=i?p2(v[i]):v[i];$("r"+u[0]).style.strokeDashoffset=289*(1-Math.min(1,v[i]/u[2]))})}
+tick();setInterval(tick,1000);
+/* marquee + stats */
+const w=`<span class="gold">Abdullah</span><i>✦</i><span>A beautiful beginning</span><i>✦</i><span class="gold">Zainab</span><i>✦</i><span>${fmt(T,{day:"numeric",month:"long",year:"numeric"})}</span><i>✦</i>`;
+$("mq").innerHTML=w.repeat(4);
+$("stats").innerHTML=[[CONFIG.events.length,"days of celebration"],[2,"families becoming one"],[1,"beautiful beginning"],["∞","duas welcome"]].map(s=>`<div><b class="gold">${s[0]}</b><span>${s[1]}</span></div>`).join("");
+/* events */
+const ymd=d=>d.getFullYear()+p2(d.getMonth()+1)+p2(d.getDate())+"T"+p2(d.getHours())+p2(d.getMinutes())+"00";
+$("evgrid").innerHTML=CONFIG.events.map(e=>{const d=new Date(e.date),end=new Date(+d+4*36e5),q=encodeURIComponent(e.venue+" "+e.addr),
+ cal="https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent(e.name+" - "+CONFIG.groom+" & "+CONFIG.bride)+"&dates="+ymd(d)+"/"+ymd(end)+"&location="+q;
+ return `<article class="ev rv"><div class="dn gold">${d.getDate()}</div><div class="mo">${fmt(d,{month:"long",year:"numeric"})}</div><h3>${e.name}</h3>
+ <p>${fmt(d,{weekday:"long"})} at ${fmt(d,{hour:"numeric",minute:"2-digit",hour12:true})}</p><p>${e.venue}<br>${e.addr}</p>
+ <div class="row"><a class="btn" target="_blank" rel="noopener" href="https://maps.app.goo.gl/vqntV8Ys1u5sdMok9?g_st=it">Directions</a><a class="btn" target="_blank" rel="noopener" href="${cal}">Add to calendar</a></div></article>`}).join("");
+$("tl").innerHTML=CONFIG.schedule.map(r=>`<div><b>${r[0]}</b><span>${r[1]}</span></div>`).join("");
+document.querySelectorAll(".ev").forEach(c=>{c.onpointermove=e=>{if(e.pointerType!=="mouse")return;const b=c.getBoundingClientRect();c.style.setProperty("--ry",((e.clientX-b.left)/b.width-.5)*8+"deg");c.style.setProperty("--rx",(.5-(e.clientY-b.top)/b.height)*8+"deg")};c.onpointerleave=()=>{c.style.setProperty("--rx","0deg");c.style.setProperty("--ry","0deg")}});
+/* rail progress */
+const path=document.querySelector(".path");
+function rail(){const b=path.getBoundingClientRect(),h=innerHeight*.6;$("rf").style.height=Math.max(0,Math.min(b.height,h-b.top))+"px"}
+addEventListener("scroll",rail,{passive:true});rail();
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("v");io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll(".rv").forEach(n=>io.observe(n));
+/* share */
+$("share").onclick=async e=>{const u=location.href.split("?")[0];try{if(navigator.share)await navigator.share({title:"Abdullah & Zainab's wedding",text:"You are invited to our wedding.",url:u});else{await navigator.clipboard.writeText(u);e.target.textContent="Link copied"}}catch(_){}};
+/* gate */
+$("enter").onclick=()=>{$("gate").classList.add("open");document.body.classList.remove("lock");document.body.classList.add("in")};
+/* ambient sound */
+let ac,on=false;
+$("snd").onclick=()=>{if(!ac){ac=new(window.AudioContext||window.webkitAudioContext)();const m=ac.createGain();m.gain.value=0;m.connect(ac.destination);ac.m=m;
+ [110,164.8,220,277.2,329.6].forEach((f,i)=>{const o=ac.createOscillator(),a=ac.createGain(),l=ac.createOscillator(),lg=ac.createGain();o.frequency.value=f;a.gain.value=.07;l.frequency.value=.06+i*.03;lg.gain.value=.05;l.connect(lg);lg.connect(a.gain);o.connect(a);a.connect(m);o.start();l.start()})}
+ on=!on;ac.resume();ac.m.gain.linearRampToValueAtTime(on?.45:0,ac.currentTime+1.5);$("snd").textContent=on?"Sound on":"Sound off";$("snd").setAttribute("aria-pressed",on)};
+/* constellation */
+const cv=$("net"),x=cv.getContext("2d"),still=matchMedia("(prefers-reduced-motion:reduce)").matches,gl=$("glow");let W,H,N=[],mx=-999,my=-999;
+function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight}rs();addEventListener("resize",rs);
+N=Array.from({length:Math.min(80,innerWidth/13|0)},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35}));
+addEventListener("pointermove",e=>{mx=e.clientX;my=e.clientY;gl.style.transform=`translate(${mx}px,${my}px)`});
+(function loop(){x.clearRect(0,0,W,H);x.fillStyle="#e2b857";
+ for(const a of N){a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1;x.globalAlpha=.7;x.fillRect(a.x-1,a.y-1,2.2,2.2)}
+ x.strokeStyle="#e2b857";
+ for(let i=0;i<N.length;i++){const a=N[i];for(let j=i+1;j<N.length;j++){const b=N[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<130){x.globalAlpha=(1-d/130)*.28;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}
+  const d=Math.hypot(a.x-mx,a.y-my);if(d<190){x.globalAlpha=(1-d/190)*.7;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(mx,my);x.stroke()}}
+ if(!still)requestAnimationFrame(loop)})();
+</script>
+</body>
+</html>
